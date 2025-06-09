@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>00</div>
+    <button onclick="s()">start</button>
+    <button onclick="p()">pause</button>
+    <button onclick="r()">reset</button>
+    <ul></ul>
+    <script>
+        let dr=document.querySelector("div")
+        let ur=document.querySelector("div")
+        let c=0,m=0,iid=-1
+        let inc=()=>{
+            c++
+            if(c==60){
+                m++
+                c=0
+            }
+            dr.innerHTML=(m<10?"0"+m:m)+":"+(c<10?"0"+c:c)
+        }
+        let s=()=>{
+            if(iid==-1){
+                iid=setInterval(inc,1000)
+            }
+        }
+        let p=()=>{
+            clearInterval(iid)
+            iid=-1
+             ulr.innerHTML(iid)
+        }
+         
+        let r=()=>{
+            c=0
+            m=0
+            dr.innerHTML="00:00"
+            clearInterval(iid)
+            iid=-1
+           
+        }
+    
+
+        /* let dr=document.querySelector("div")
+        let fun=()=>{
+            dr.innerHTML=new Date().toLocaleTimeString()
+        }
+        setInterval(fun,1000)
+
+
+         let c=0
+        let dr=document.querySelector("div")
+        let d=()=>{
+            c++
+            dr.innerHTML=c
+        }
+        let iid=setInterval(d,2000)
+        clearInterval(iid)
+       localStorage.setItem("uid","vijay123@gmail.com")
+console.log(localStorage.getItem("uid"))
+console.log(localStorage.getItem("ph"))
+console.log(localStorage.removeItem("uid"))
+localStorage.setItem("mail","sandeep34@gmail.com")
+
+sessionStorage.setItem("ph","BPEL345LMNO")
+console.log(sessionStorage.getItem("Ph"))
+
+let a=[3,4,6,8,9]
+let s=JSON.stringify(a)
+let r=JSON.parse(s)
+console.log(typeof(s),typeof(r))
+console.log(s)
+console.log(r)*/
+    </script>
+</body>
+</html>
